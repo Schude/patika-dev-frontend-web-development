@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google!</title>
+    <!-- Internal CSS -->
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        width: 100%;
+      }
+      .table-row {
+        text-align: center;
+      }
+      p:not(:last-child) {
+        margin: 0;
+      }
+    </style>
+    <!-- /Internal CSS -->
+  </head>
+  <!-- <center> etiketi günümüzde kullanılmadığı için flex ile ortalama yapıldı.
+        Orijinal koda bağlı kalınarak yapıldı.
+        Orijinal koddan kopmamak için yine <table> kullanıldı.
+        Bazı margin-padding değerleri yüzünden piksellik kayma mevcut.
+
+     -->
+  <body>
+    <!-- Main Div -->
+    <div class="main">
+      <!-- Header -->
+      <header style="text-align: center" class="header">
+        <img src="./images/google-logo.jpg" alt="Google!" />
+        <!-- /Header -->
+      </header>
+
+      <!-- Section -->
+      <section class="container">
+        <!-- Table -->
+        <table style="width: 90%; border: 0">
+          <tbody>
+            <!-- Table-row First -->
+            <tr class="table-row">
+              <td style="background-color: #eeeeee" colspan="4">
+                <p>Search the web using Google!</p>
+                <input style="width: 317px" type="text" name="query" /><br />
+                <input type="submit" value="Google Search" />
+                <input
+                  type="submit"
+                  name="lucky-search"
+                  value="I'm feeling lucky"
+                />
+              </td>
+            </tr>
+            <!-- /Table Row - First -->
+
+            <!-- Table Row - Second -->
+            <tr class="table-row">
+              <!-- First Column -->
+              <td style="width: 548px; background-color: #7ee5da">
+                <p>Special Searches</p>
+                <a
+                  href="https://web.archive.org/web/19990224014327/http://www.google.com/stanford"
+                >
+                  Stanford Search</a
+                >
+                <br />
+                <a
+                  href="https://web.archive.org/web/19990221231654/http://www.google.com/linux"
+                >
+                  Linux Search</a
+                >
+                <br />
+              </td>
+              <!-- /First Column -->
+
+              <!-- Second Column -->
+              <td
+                style="
+                  width: 290px;
+                  font-size: small;
+                  background-color: #70ccc2;
+                "
+              >
+                <a
+                  href="https://web.archive.org/web/19990221212930if_/http://www.google.com/help.html"
+                  >Help!</a
+                >
+                <br />
+                <a
+                  href="https://web.archive.org/web/19990427105230if_/http://www.google.com/about.html"
+                  >About Google!</a
+                ><br />
+                <a
+                  href="https://web.archive.org/web/19990221202430if_/http://www.google.com/company.html"
+                  >Company Info</a
+                ><br />
+                <a
+                  href="https://web.archive.org/web/19990224043535if_/http://www.google.com/stickers.html"
+                  >Google! Logos</a
+                ><br />
+              </td>
+              <!-- /Second Column -->
+
+              <!-- Third Column -->
+              <td style="width: 645px; background-color: #62b3aa">
+                <p style="font-size: small">
+                  Get Google! <br />
+                  updates monthly:
+                </p>
+                <input type="hidden" name="listname" value="google-friends" />
+                <input type="text" name="emailaddr" value="your e-mail" /><br />
+                <input type="submit" name="submitAction" value="Subscribe" />
+                <a style="font-size: small" href="">Archive</a>
+              </td>
+              <!-- /Third Column -->
+            </tr>
+            <!-- /Table Row - Second -->
+          </tbody>
+        </table>
+        <!-- /Table -->
+        <p style="font-size: small">Copyright ©1998 Google Inc.</p>
+      </section>
+      <!-- /Section -->
+    </div>
+    <!-- /Main Div -->
+  </body>
+  <script src="">
+    // Google Search Butonu aktifleştirelecek.
+  </script>
+</html>
