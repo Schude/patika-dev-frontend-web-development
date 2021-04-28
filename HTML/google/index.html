@@ -44,16 +44,34 @@
         <table style="width: 90%; border: 0">
           <tbody>
             <!-- Table-row First -->
+
             <tr class="table-row">
               <td style="background-color: #eeeeee" colspan="4">
                 <p>Search the web using Google!</p>
-                <input style="width: 317px" type="text" name="query" /><br />
-                <input type="submit" value="Google Search" />
-                <input
-                  type="submit"
-                  name="lucky-search"
-                  value="I'm feeling lucky"
-                />
+                
+                <!-- Feeling Lucky butonu denenecek.
+                    web.archive kullanılarak geçmiş versiyon google aramaları yapılmaya çalışılacak.  -->
+                    
+                <!-- Aramayı günümüz google'ında yapıyor. -->
+                <form method="GET" action="http://www.google.com/search">
+                  <input
+                    style="width: 317px"
+                    type="text"
+                    name="query"
+                    value=""
+                  /><br />
+                  <input
+                    id="search-button"
+                    type="submit"
+                    value="Google Search"
+                  />
+                  <input
+                    type="submit"
+                    name="lucky-search"
+                    value="I'm feeling lucky"
+                    s
+                  />
+                </form>
               </td>
             </tr>
             <!-- /Table Row - First -->
@@ -129,7 +147,4 @@
     </div>
     <!-- /Main Div -->
   </body>
-  <script src="">
-    // Google Search Butonu aktifleştirelecek.
-  </script>
 </html>
