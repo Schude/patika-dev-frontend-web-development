@@ -10,12 +10,12 @@
   width: 80%;
   margin: 0 auto;
 }
-.logo-link{
+.logo-link {
   display: flex;
   width: 100px;
   height: 70px;
 }
-.logo-link img{
+.logo-link img {
   max-height: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -32,7 +32,7 @@
   list-style-type: none;
 }
 .navbar-list li {
-  color:#000;
+  color: #000;
   font-size: 1.2em;
   font-weight: 600;
   padding: 0.5em 2em;
@@ -47,7 +47,7 @@
 }
 .navbar-list li a:visited {
   text-decoration: none;
-  color: #000
+  color: #000;
 }
 .section-title {
   width: 100%;
