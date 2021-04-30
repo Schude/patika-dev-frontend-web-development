@@ -106,11 +106,11 @@
 
                 <label for="contact-message">Mesajınız</label>
                 <textarea
-                  style="width: 400px; height: 200px"
+                  style="width: 400px; height: 150px"
                   id="contact-message"
                   value=""
                   name="contact-message"
-                  class="contact-form-textarea"
+                  class="contact-form-input"
                   maxlength="400"
                   placeholder="Mesajınız için 400 karakter sınırı vardır."
                   required
@@ -129,13 +129,17 @@
               </form>
             </article>
           </div>
-          <div class="subs flex-row-space-between">
+          <div
+            style="justify-content: space-evenly"
+            class="subs flex-row-space-between"
+          >
             <p class="sub-content-item flex">
               <b>Yeni ürünlerden, size özel fırsatlardan ve promosyonlardan</b
               ><br />
               ilk siz haberdar olun.!
             </p>
             <input
+              style="position: relative; left: 14px"
               class="contact-form-input"
               placeholder="E-mailinizi giriniz."
               value=""
