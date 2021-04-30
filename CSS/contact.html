@@ -45,7 +45,7 @@
 
       <section class="content-section flex-column-center">
         <h2 class="section-title">Bize Ulaşın</h2>
-        <p class="content-text">
+        <p style="font-size: 20px" class="content-text">
           ÜRÜNLER HAKKINDA BİLGİ ALMAK VE İNTERNET MAĞAZAMIZLA İLGİLİ HER TÜRLÜ
           BİLGİ VE DESTEK İÇİN
         </p>
@@ -106,7 +106,7 @@
 
                 <label for="contact-message">Mesajınız</label>
                 <textarea
-                  style="width: 400px; height: 150px"
+                  style="width: 400px; height: 150px; resize: none"
                   id="contact-message"
                   value=""
                   name="contact-message"
@@ -115,10 +115,13 @@
                   placeholder="Mesajınız için 400 karakter sınırı vardır."
                   required
                 ></textarea>
-                <input required type="checkbox" id="privacy" />
-                <label for="privacy">
-                  Gizlilik sözleşmesini kabul ediyorum.</label
-                >
+                <div style="margin: 0.5em 0" class="contact-form-inpt">
+                  <input required type="checkbox" id="privacy" />
+                  <label style="padding-left: 10px" for="privacy">
+                    Gizlilik sözleşmesini kabul ediyorum.</label
+                  >
+                </div>
+
                 <button
                   style="width: 400px; height: 30px"
                   type="submit"
@@ -133,7 +136,7 @@
             style="justify-content: space-evenly"
             class="subs flex-row-space-between"
           >
-            <p class="sub-content-item flex">
+            <p style="font-size: 22px" class="sub-content-item flex">
               <b>Yeni ürünlerden, size özel fırsatlardan ve promosyonlardan</b
               ><br />
               ilk siz haberdar olun.!
