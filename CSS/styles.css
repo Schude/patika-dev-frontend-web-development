@@ -12,11 +12,13 @@
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--light-orange);
+  text-align: center;
 }
 .main {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 .logo-link {
@@ -66,13 +68,12 @@ h3 {
 .section-title {
   width: 100%;
   font-size: 2em;
-  text-align: center;
   padding: var(--top-bot-half-em);
   margin: var(--top-bot-half-em);
 }
 .product-card {
-  width: 220px;
-  height: 220px;
+  width: 300px;
+  height: 300px;
   overflow: hidden;
   background: #ffffff;
   border-radius: 0.5em;
@@ -84,16 +85,13 @@ h3 {
   margin: 0 auto;
 }
 .sub-content-title {
-  color: white;
   width: 100%;
   font-size: 1.5em;
-  text-align: center;
   padding: var(--top-bot-half-em);
   margin: var(--top-bot-half-em);
   border-bottom: var(--border-bot);
 }
 .sub-content {
-  width: 90%;
   padding: var(--top-bot-half-em);
   margin: var(--top-bot-half-em);
   border-radius: 0.5em;
@@ -101,9 +99,13 @@ h3 {
 }
 .content-img {
   float: left;
-  padding: 2em 4em;
+  padding: 1em 2em;
 }
 .content-text {
-  padding: 2em 4em;
+  padding: 1em 2em;
   color: rgb(255, 255, 255);
+}
+
+input {
+  width: 400px;
 }
