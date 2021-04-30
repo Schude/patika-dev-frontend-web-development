@@ -7,6 +7,70 @@
     <title>Ürünlerimiz - Serkan Müzik</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="style-util.css" />
+    <style>
+      li{
+        list-style-type: none;
+      }
+      .products-container {
+        background-color: #131414;
+      }
+      .sub-title {
+        font-size: 1.5em;
+        padding: var(--top-bot-half-em);
+        /* margin: var(--top-bot-half-em); */
+        border-bottom: var(--border-bot);
+        border-top: var(--border-bot);
+      }
+      .products-sub-container {
+        margin: var(--top-bot-half-em);
+        display: flex;
+        flex-flow: row wrap;
+        color: rgb(255, 255, 255);
+        justify-content: center;
+        background-color: #131414;
+      }
+      .small-product-item {
+        display: flex;
+        flex-flow: row wrap;
+        background: #ffffff;
+        margin: 0.75em;
+        font-size: 1.1em;
+        background-color: rgb(48, 45, 45);
+      }
+      .product-img-box {
+        width: 220px;
+        height: 220px;
+        overflow: hidden;
+        background: #ffffff;
+        border-radius: 0.5em;
+        margin: 0.75rem;
+        display: flex;
+      }
+      .product-img-box img {
+        align-self: center;
+        max-height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .product-content {
+        display: flex;
+        width: 300px;
+        flex-flow: column nowrap;
+        justify-content: center;
+        line-height: 30px;
+        padding-top: 20px;
+      }
+      .product-name {
+        font-weight: 500;
+        padding: 8px;
+        text-align: center;
+      }
+      .product-price {
+        text-align: center;
+        font-weight: 600;
+        padding: 8px 0;
+      }
+    </style>
   </head>
   <body>
     <!-- Main -->
@@ -41,6 +105,246 @@
         <!-- Navbar -->
       </header>
       <!-- /Header -->
+      <div class="products-navbar">
+        <div class="product-list">
+          <ul class="products-list">
+            <li class="list-item"><a href="">Davul</a></li>
+            <li class="list-item"><a href="">Gitar</a></li>
+            <li class="list-item"><a href="">Yaylılar</a></li>
+            <li class="list-item"><a href="">Nefesliler</a></li>
+          </ul>
+        </div>
+        <div class="search-div">
+          <input class="search-input" value="" type="text" />
+          <input class="search-button" value="Ara" type="button" />
+        </div>
+      </div>
+      <div class="products-container">
+        <h2 class="sub-title">Gitar</h2>
+        <div class="products-sub-container">
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Gitar/IBANEZ-GRX40-BKN-Elektro-Gitar_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">IBANEZ GRX40-BKN Elektro Gitar</p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Gitar/BARCELONA-LC-3900-PB-Mavi-Klasik.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">Barcelona LC 3900 PB Mavi Klasik</p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Gitar/squier-classic-vibe-70s-jazz-bass.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">Squier Classic Vibe 70s Jazz Bass</p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Gitar/Martinez-MP-1-PRE-CE-Cutaway-Ele_93748_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">
+                Martinez MP-1 PRE CE Cutaway Elektro Klasik Gitar
+              </p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+        </div>
+        <h2 class="sub-title">Davul</h2>
+        <div class="products-sub-container">
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Davul/pearl-mmg924xsp-c186-masters-map_143693_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">
+                PEARL MMG924XSP/C186 - Masters Maple Gum Hand Rubbed Natural
+                Maple 4 Parça (22B/10T/12T/16F) Akustik Davul Seti
+              </p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Davul/pearl-mmg924xsp-c421-masters-map_145446_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">
+                PEARL MMG924XSP/C421 - Masters Maple Gum Black Diamond Pearl 4
+                Parça (22B/10T/12T/16F) Akustik Davul Seti
+              </p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Davul/roland-vad506-dijital-davul-seti_180233_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">ROLAND VAD506 Dijital Davul Seti</p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Davul/pearl-rs505c-c91-roadshow-red-wi_35149_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">
+                PEARL RS505C/C91 - Roadshow Red Wine 5 Parça
+                (20B/10T/12T/14F/14S) Aksamlı & Zilli Akustik Davul Seti
+              </p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+        </div>
+        <h2 class="sub-title">Yaylılar</h2>
+        <div class="products-sub-container">
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Yaylılar/vanetta-vl-1b-4-4-mat-keman_94201_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">VANETTA VL-1B 3/4 Mat Cila Keman(Mat)</p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Yaylılar/ANTON-BRUCKNER-MAESTRO-IV-CELLO_71483_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">ANTON BRUCKNER MAESTRO IV Çello</p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Yaylılar/vanetta-vl-3-3-4-masif-keman_173925_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">
+                VANETTA VL-3 / 3/4 Masif Ağaç Abanoz Aksam Keman
+              </p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Yaylılar/OFENBACH-4-4-VIOLA-WITH-A-LITTLE_6967_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">
+                OFENBACH 4/4 VIOLA WITH A LITTLE GRAME(MAT)
+              </p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+        </div>
+        <h2 class="sub-title">Nefesliler</h2>
+        <div class="products-sub-container">
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Nefesliler/AMATI-AHTA-800-OK-Eb-Mi-Bamol-Al_93634_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">
+                AMATI AHTA 800-OK Eb Mi Bemol Alto Saksafon Altın Renk Case
+                Dahil
+              </p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Nefesliler/BUFFET-R13-Eb-Klarnet_35731_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">BUFFET R13-Eb Klarnet</p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Nefesliler/amati-vth-700cqs-on-tuba_80612_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">AMATI VTH 700CQS-ON Tuba</p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+          <div class="small-product-item">
+            <div class="product-img-box">
+              <img
+                src="./images/Nefesliler/Altus-1107SRB-S-Si-Kuyruk-Yan-Fl_1111_1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product-content">
+              <p class="product-name">
+                Altus 1107SRB-S Si Kuyruk Yan Flüt (Case Dahil)
+              </p>
+              <p class="product-price">6,142 TL</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
