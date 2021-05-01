@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="style-util.css" />
     <style>
-      li{
+      li {
         list-style-type: none;
       }
       .products-container {
@@ -17,9 +17,9 @@
       .sub-title {
         font-size: 1.5em;
         padding: var(--top-bot-half-em);
-        /* margin: var(--top-bot-half-em); */
         border-bottom: var(--border-bot);
-        border-top: var(--border-bot);
+        /* border-top: var(--border-bot); */
+        background-color: #252629;
       }
       .products-sub-container {
         margin: var(--top-bot-half-em);
@@ -35,7 +35,7 @@
         background: #ffffff;
         margin: 0.75em;
         font-size: 1.1em;
-        background-color: rgb(48, 45, 45);
+        background-color: #282b31;
       }
       .product-img-box {
         width: 220px;
@@ -69,6 +69,62 @@
         text-align: center;
         font-weight: 600;
         padding: 8px 0;
+      }
+
+      .products-navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #282b31;
+      }
+
+      .products-list {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: wrap;
+        align-content: center;
+        color: #f8c464;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 0.5em 2em;
+        transform: scale(1);
+        transition: 0.4s all ease;
+      }
+      .products-list > .list-item:hover {
+        transform: scale(1.2);
+      }
+      .search-div {
+        align-self: center;
+      }
+
+      .search-div > input {
+        height: 32px;
+        margin: 0.5em 1em;
+        border: 0;
+        font-size: 1.1em;
+
+        border-radius: 0.2em;
+        transform: scale(1);
+        transition: 0.25s all ease;
+      }
+      .search-div > .search-input {
+        width: 400px;
+        padding-left: 8px;
+      }
+      .search-div > .search-button {
+        cursor: pointer;
+        width: 100px;
+      }
+      .search-div > .search-input:focus-visible,
+      .search-button:hover {
+        outline: none;
+        box-shadow: 2px 2px 5px rgba(1, 1, 0, 0.7);
+      }
+      .search-div > .search-input::placeholder {
+        font-size: 0.8em;
       }
     </style>
   </head>
@@ -106,16 +162,19 @@
       </header>
       <!-- /Header -->
       <div class="products-navbar">
-        <div class="product-list">
-          <ul class="products-list">
-            <li class="list-item"><a href="">Davul</a></li>
-            <li class="list-item"><a href="">Gitar</a></li>
-            <li class="list-item"><a href="">Yaylılar</a></li>
-            <li class="list-item"><a href="">Nefesliler</a></li>
-          </ul>
-        </div>
+        <ul class="products-list">
+          <li class="list-item"><a href="">Davul</a></li>
+          <li class="list-item"><a href="">Gitar</a></li>
+          <li class="list-item"><a href="">Yaylılar</a></li>
+          <li class="list-item"><a href="">Nefesliler</a></li>
+        </ul>
         <div class="search-div">
-          <input class="search-input" value="" type="text" />
+          <input
+            class="search-input"
+            placeholder="Ürün veya marka arayınız"
+            value=""
+            type="text"
+          />
           <input class="search-button" value="Ara" type="button" />
         </div>
       </div>
