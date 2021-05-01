@@ -1,20 +1,41 @@
+* {
+  /* Tüm dokümana  0 margin-padding verildi */
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   list-style-type: none;
-  margin: 10px;
+  /* Margin 4 px düşürüldü. */
+  margin: 6px;
   overflow: hidden;
-  margin-right: 16px;
-  font-family: arial,sans-serif;
+  /* margin-right 2px düşürüldü */
+  margin-right: 14px;
+  font-family: arial, sans-serif;
   font-size: 13px;
+  /* Header flexbox olarak stillendi. */
+  height: 48px;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
 }
 
 .headerli a {
   display: block;
   color: black;
   text-align: center;
-  padding: 5px 5px;
+  /* padding kaldırıldı ve inline-block */
   text-decoration: none;
+  display: inline-block;
 }
-
+.headerli {
+  /* header-itemlara padding-left verildi. */
+  padding-left: 24px;
+}
+.headerli:nth-child(2) {
+  /* Gmail ve Images linkleri profil resmi ve apps butonundan ayrıldı */
+  padding-left: 30px;
+}
 .headerli a:hover {
   text-decoration: underline;
 }
@@ -22,6 +43,10 @@
 .container {
   text-align: center;
   margin: 100px;
+  
+  margin-top: 208px;
+  /* logoya 92px height verildi. */
+  max-height: 92px;
 }
 
 .search-area {
@@ -33,11 +58,18 @@
   height: 44px;
   margin: 0 auto;
   margin-top: -77px;
-  width: 582px;
+  /* Width auto ve max-width 2px artırıldı. */
+  width: auto;
+  max-width: 584px;
+  /* radius 24px verildi. */
+  border-radius: 24px;
 }
 
 .search-area:hover {
-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
+  /* Orijinali'n den alındı. */
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223, 225, 229, 0);
 }
 
 .search {
@@ -65,6 +97,38 @@ box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
   position: relative;
 }
 
+/* Sesle Arama ve Ekran klavyesi için CSS */
+.search-logos {
+  display: flex;
+  flex: 0 0 auto;
+  margin-top: -5px;
+  margin-left: -50px;
+  align-items: stretch;
+  flex-direction: row;
+}
+.search-logo {
+  flex: 1 0 auto;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  outline: none;
+  padding: 0 8px;
+  line-height: 44px;
+}
+.keyboard-logo {
+  background: url(//www.gstatic.com/inputtools/images/tia.png) no-repeat center;
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
+.search-logo > img {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
+
 .input-enter {
   display: flex;
   flex: 1;
@@ -89,7 +153,8 @@ box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
   outline: none;
   display: flex;
   flex: 100%;
-  margin-top: -68px;
+  /* Margin-top değiştirildi. */
+  margin-top: -103px;
   font: 16px arial, sans-serif;
   line-height: 34px;
   height: 34px !important;
@@ -102,26 +167,50 @@ box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
   text-align: start;
   appearance: textfield;
   cursor: text;
+  /* Width verilip border kaldırıldı */
+  width: 480px;
+  border: none;
 }
+/* Buttons CSS */
+.buttons {
+  display: flex;
+  justify-content: center;
+  min-width: 54px;
+  height: 36px;
+  padding-top: 18px;
+}
+/* Kod tekrarı olmaması açısından 2 buton stili burada verildi. */
+.googlesearch, .feelinglucky {
+  /* Button rengi ve border oluşturuldu. */
+  background-color: #f8f9fa;
+  border: 1px solid #f2f2f2;
 
-.googlesearch {
   margin: 11px 4px;
   padding: 0 16px;
   line-height: 27px;
+  /* font tipi verildi. */
+  font-family: arial, sans-serif;
   min-width: 54px;
+  /* buton yüksekliği verildi */
+  height: 36px;
   text-align: center;
   cursor: pointer;
   user-select: none;
+  /* radius ve font-size verildi */
+  border-radius: 4px;
+  font-size: 14px;
+  /* Buton text rengi orjinalinde #3c4043 ancak ödev gereği aşağıdaki gibi verilmiştir. */
+  color: #5f6368;
+}
+/* Orijinal Google ile aynı hover effect uygulandı */
+.googlesearch:hover,
+.feelinglucky:hover {
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
 }
 
-.feelinglucky {
-  padding: 0 16px;
-  line-height: 27px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-}
 
 .footer {
   margin: 0;
@@ -132,8 +221,11 @@ box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
   position: fixed;
   bottom: 0;
   width: 100%;
-  margin-left: -8px;
-  line-height: 10px;
+  /* Margin-left kaldırıldı. */
+  line-height: 17px;
+  /* Liste noktaları kaldırıldı ve arkaplan rengi değiştirildi. */
+  list-style-type: none;
+  background-color: #f2f2f2;
 }
 
 .footerli {
