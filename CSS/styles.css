@@ -78,10 +78,16 @@ h4 {
   border-radius: 0.5em;
   margin: 0.75rem;
 }
-.product-card img {
+.product-card a {
+  display: flex;
+  max-height: 100%;
+  min-width: 100%;
+  justify-content: center;
+}
+.product-card > a> img{
   max-height: 100%;
   max-width: 100%;
-  margin: 0 auto;
+  margin:0 auto;
 }
 .sub-content-title {
   width: 100%;
