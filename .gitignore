@@ -1,10 +1,13 @@
-# ./CSS/images
-*.jpg
-*.png
+# Ödevlerin sağlıklı gözükebilmesi açısından tüm image ignore kaldırıldı.
 
-#CSS Anasayfa ve logo gözüksün
-!serkan-muzik-logo.png
-!IBANEZ-GRX40-BKN-Elektro-Gitar_1.jpg
-!pearl-mmg924xsp-c186-masters-map_143693_1.jpg
-!AMATI-AVTS-700-OK-Vantage-Tenor-_78357_1.jpg
-!vanetta-vl-3-3-4-masif-keman_173925_1.jpg
+
+# # ./CSS/images
+# *.jpg
+# *.png
+
+# #CSS Anasayfa ve logo gözüksün
+# !serkan-muzik-logo.png
+# !IBANEZ-GRX40-BKN-Elektro-Gitar_1.jpg
+# !pearl-mmg924xsp-c186-masters-map_143693_1.jpg
+# !AMATI-AVTS-700-OK-Vantage-Tenor-_78357_1.jpg
+# !vanetta-vl-3-3-4-masif-keman_173925_1.jpg
