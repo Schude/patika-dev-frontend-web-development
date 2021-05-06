@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #202329;
+    color: #f4a734;
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    letter-spacing: 7px;
+}
+.greet-text {
+    margin-top: 150px;
+}
+div {
+    padding-bottom: 10px;
+}
+.clock {
+    padding: 20px;
+    font-family: "Orbitron", sans-serif;
+}

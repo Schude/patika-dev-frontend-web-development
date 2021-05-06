@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript Saat ve Karşılama</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Orbitron&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./style/style.css" />
+    </head>
+    <body>
+        <div class="main">
+            <div class="greet-text">
+                Merhaba <span id="user" class="user">a</span>, Hoşgeldin!
+            </div>
+            <div class="time-text">
+                <div id="clock" onload="showTime()" class="clock"></div>
+                <div id="date" onload="showTime()" class="date"></div>
+            </div>
+            <div class="main-text">
+                <b>Kodluyoruz Frontend Web Development Patikası</b> <br />
+                JavaScript Saat ve Karşılama Ödevi
+            </div>
+        </div>
+    </body>
+    <script src="./js/index.js"></script>
+</html>
