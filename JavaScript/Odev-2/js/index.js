@@ -16,6 +16,7 @@ const renderTodos = () => {
         var span = document.createElement("span");
         var txt = document.createTextNode("\u00D7");
         span.className = "close";
+        span.onclick = removeTodo;
         span.appendChild(txt);
         liElement.appendChild(span);
     });
@@ -50,7 +51,7 @@ const handleChecked = () => {
 
 const getLocalStoreData = () => JSON.parse(localStorage.getItem("Todos"));
 
-getLocalStoreData();
+// getLocalStoreData();
 const setLocalStoreData = () => {
     localStorage.setItem("Todos", JSON.stringify(TODOS));
 };
@@ -62,30 +63,34 @@ const createLocalStore = () => {
     }
 };
 const addTodo = (text) => {
-    let newTodo = {
-        id: Date.now(), //unique
-        text,
-        checked: false,
-    };
-
-    TODOS = [...TODOS, newTodo];
-    setLocalStoreData();
-    renderTodos();
+    //checking whitespaces or empty
+    text = text.replace(/^\s+/, "").replace(/\s+$/, "");
+    if (text === "" || text === " ") {
+        $(".error").toast("show");
+    } else {
+        let newTodo = {
+            id: Date.now(), //unique ID
+            text,
+            checked: false,
+        };
+        TODOS = [...TODOS, newTodo];
+        setLocalStoreData();
+        $(".success").toast("show");
+        renderTodos();
+    }
 };
 
 const removeTodo = () => {
     let list = document.querySelector("#list");
     list.addEventListener("click", (event) => {
-        TODOS = TODOS.filter((todo) => {
-            return todo.id != event.target.parentNode.id;
-        });
+        TODOS = TODOS.filter((todo) => todo.id != event.target.parentNode.id);
         renderTodos();
         setLocalStoreData();
     });
+    $(".remove").toast("show");
 };
 
 createLocalStore();
 TODOS = getLocalStoreData();
 renderTodos();
 handleChecked();
-removeTodo();
