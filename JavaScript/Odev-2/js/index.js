@@ -12,6 +12,12 @@ const renderTodos = () => {
         }
         list.appendChild(liElement);
         liElement.id = todo.id;
+
+        var span = document.createElement("span");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        liElement.appendChild(span);
     });
 };
 const resetList = () => {
@@ -64,11 +70,22 @@ const addTodo = (text) => {
 
     TODOS = [...TODOS, newTodo];
     setLocalStoreData();
-    renderTodos(newTodo);
+    renderTodos();
 };
-const removeTodo = () => {};
+
+const removeTodo = () => {
+    let list = document.querySelector("#list");
+    list.addEventListener("click", (event) => {
+        TODOS = TODOS.filter((todo) => {
+            return todo.id != event.target.parentNode.id;
+        });
+        renderTodos();
+        setLocalStoreData();
+    });
+};
 
 createLocalStore();
 TODOS = getLocalStoreData();
 renderTodos();
 handleChecked();
+removeTodo();
