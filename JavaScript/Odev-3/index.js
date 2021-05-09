@@ -13,10 +13,12 @@ getCategories = () => {
 
 createNavigateButtons = (categories) => {
     let navButtons = categories.map((category) => {
-        let btn = document.createElement("button");
-        btn.classList.add("btn", "btn-item", "btn-outline-dark");
-        let textNode = document.createTextNode(category);
-        btn.appendChild(textNode);
+        let btn = createElement(
+            "button",
+            ["btn", "btn-item", "btn-outline-dark"],
+            category
+        );
+
         btn.id = category;
         buttonContainer.appendChild(btn);
         return btn;
@@ -24,41 +26,43 @@ createNavigateButtons = (categories) => {
     return navButtons;
 };
 
-createMenuItemContent = (menu) => {
+renderMenuItems = (menu) => {
     menu.map((item) => {
-        let img = document.createElement("img"); //1.
-        img.classList.add("photo");
+        //Main Item
+        let itemDOM = createElement("div", [
+            "menu-items",
+            "col-lg-6",
+            "col-sm-12",
+        ]);
+
+        //Main Item's ChildNodes
+        let img = createElement("img", ["photo"]);
+        //Adding img attributes
         img.src = item.img;
         img.alt = item.title;
+        let itemData = createElement("div", ["menu-info"]);
 
-        let itemData = document.createElement("div"); //1.
-        itemData.classList.add("menu-info");
+        //ItemData's ChildNodes
+        let itemTitle = createElement("div", ["menu-title"]);
+        let itemDesc = createElement("div", ["menu-text"], item.desc);
 
-        let itemTitle = document.createElement("div");
-        itemTitle.classList.add("menu-title");
-        itemData.appendChild(itemTitle);
+        //ItemTitle's ChildNodes
+        let titleEle = createElement("h4", ["item-title"], item.title);
+        let priceEle = createElement("h4", ["price"], item.price);
 
-        let itemDesc = document.createElement("div");
-        itemDesc.classList.add("menu-text");
-        let itemDescTextNode = document.createTextNode(item.desc);
-        itemDesc.appendChild(itemDescTextNode);
-        itemData.appendChild(itemDesc);
-
-        let titleEle = document.createElement("h4");
-        let titleTextNode = document.createTextNode(item.title);
-        titleEle.appendChild(titleTextNode);
+        //Adding ItemTitle's ChildNodes
         itemTitle.appendChild(titleEle);
-
-        let priceEle = document.createElement("h4");
-        priceEle.classList.add("price");
-        let priceTextNode = document.createTextNode(item.price);
-        priceEle.appendChild(priceTextNode);
         itemTitle.appendChild(priceEle);
 
-        let itemDOM = document.createElement("div");
-        itemDOM.classList.add("menu-items", "col-lg-6", "col-sm-12");
+        //Adding ItemData's ChildNodes
+        itemData.appendChild(itemTitle);
+        itemData.appendChild(itemDesc);
+
+        //Adding Main's ChildNodes
         itemDOM.appendChild(img);
         itemDOM.appendChild(itemData);
+
+        //Adding Container's ChildNodes
         section.appendChild(itemDOM);
     });
 };
@@ -67,12 +71,14 @@ handleNavButtons = (buttons) => {
     buttons.map((button) => {
         button.addEventListener("click", (event) => {
             let activeCategory = event.target.id;
-            let qwe = menu.filter((item) => item.category == activeCategory);
+            let activeCategoryMenu = menu.filter(
+                (item) => item.category == activeCategory
+            );
             if (event.target.id === "All") {
-                qwe = menu;
+                activeCategoryMenu = menu;
             }
             resetContent();
-            createMenuItemContent(qwe);
+            renderMenuItems(activeCategoryMenu);
         });
     });
 };
@@ -83,7 +89,15 @@ resetContent = () => {
         section.removeChild(element);
     });
 };
+createElement = (elem, className, text = "") => {
+    let el = document.createElement(elem);
+    el.classList.add(...className);
+    let textNode = document.createTextNode(text);
+    el.appendChild(textNode);
+
+    return el;
+};
 const categories = getCategories();
 const navButtons = createNavigateButtons(categories);
-createMenuItemContent(menu);
+renderMenuItems(menu);
 handleNavButtons(navButtons);
